@@ -1,0 +1,31 @@
+.single-developers {
+    margin-bottom: 20px;
+    background-color: #d6dbed;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.pic {
+    text-align: center;
+}
+.pic img {
+    width: 250px;
+    height: 200px;
+    border-radius: 8px;
+}
+.info {
+    color: #220851;
+    font-weight: 500;
+}
+.info p span {
+    font-weight: 800;
+}
+.cart-btn {
+    border: none;
+    background-color: #8860D0;
+    padding: 10px 38px;
+    border-radius: 8px;
+    font-weight: 700;
+    color: white;
+    font-size: 20px;
+}
