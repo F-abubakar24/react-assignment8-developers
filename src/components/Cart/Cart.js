@@ -8,7 +8,7 @@ const Cart = (props) => {
             <h2>Selected Developers</h2>
             <h4>Total Developers: {cart.length}</h4>
             {
-                cart.map(data => <p key={data.id}>Name:{data.name}</p>)
+                cart.map(data => <p key={data.id}>Name: {data.name}</p>)
             }
 
         </div>
