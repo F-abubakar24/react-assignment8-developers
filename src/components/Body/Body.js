@@ -12,16 +12,29 @@ const Body = () => {
     }, []);
 
     const [cart, setCart] = useState([]);
+    useEffect(() => {
+        
+    }, [])
+
+    const handleAddToCart = (developer) => {
+        const newCart = [...cart, developer];
+        setCart(newCart);
+    };
+
 
     return (
         <div className="developers-container">
             <div className="developers">
                 {developers.map((developer) => (
-                    <Developers developer={developer}></Developers>
+                    <Developers
+                        handleAddToCart={handleAddToCart}
+                        key={developers.id}
+                        developer={developer}
+                    ></Developers>
                 ))}
             </div>
             <div className="selected-developers">
-                <Cart></Cart>
+                <Cart cart={cart}></Cart>
             </div>
         </div>
     );
