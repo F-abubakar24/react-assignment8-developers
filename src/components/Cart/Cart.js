@@ -7,7 +7,7 @@ const Cart = (props) => {
     let totalQuantity = 0;
     let total = 0;
     for (const developer of cart) {
-        // console.log(developer.quantity)
+        
         if (!developer.quantity) {
             developer.quantity = 1;
         }
