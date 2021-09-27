@@ -15,14 +15,23 @@ const Cart = (props) => {
         total = newPrice;
         totalQuantity = totalQuantity + developer.quantity;
     }
-
+    // Showing Selected developers on the ui;
     return (
         <div className="cart-wrapper">
             <h2>Selected Developers</h2>
-            <h4><span className="selected-cart-text">Total Developers:</span> {totalQuantity}</h4>
-            <p><span className="selected-cart-text">Total Salary:</span> {total}</p>
+            <h4>
+                <span className="selected-cart-text">Total Developers:</span>{" "}
+                {totalQuantity}
+            </h4>
+            <p>
+                <span className="selected-cart-text">Total Salary:</span>{" "}
+                {total}
+            </p>
             {cart.map((data) => (
-                <p key={data.id}><span className="selected-cart-text">Name:</span> {data.name}</p>
+                <p key={data.id}>
+                    <span className="selected-cart-text">Name:</span>{" "}
+                    {data.name}
+                </p>
             ))}
         </div>
     );

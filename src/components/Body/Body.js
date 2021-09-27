@@ -4,6 +4,7 @@ import Developers from "../Developers/Developers";
 import "./Body.css";
 
 const Body = () => {
+    // This is for developer details
     const [developers, setDevelopers] = useState([]);
     useEffect(() => {
         fetch("./developers.json")
@@ -11,18 +12,20 @@ const Body = () => {
             .then((data) => setDevelopers(data));
     }, []);
 
+    // This is for cart data prosesing
     const [cart, setCart] = useState([]);
-    useEffect(() => {
-        
-    }, [])
+    useEffect(() => {}, []);
 
     const handleAddToCart = (developer) => {
         const newCart = [...cart, developer];
         setCart(newCart);
     };
 
-
     return (
+        // =====================================
+        // Showing developers details on the (UI) part
+        // =====================================
+
         <div className="developers-container">
             <div className="developers">
                 {developers.map((developer) => (
@@ -33,6 +36,11 @@ const Body = () => {
                     ></Developers>
                 ))}
             </div>
+
+            {/* ===================================== */}
+            {/* Selected developers cart (UI) part */}
+            {/* ===================================== */}
+
             <div className="selected-developers">
                 <Cart cart={cart}></Cart>
             </div>

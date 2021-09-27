@@ -2,7 +2,13 @@ import React from "react";
 import "./Developers.css";
 
 const Developers = (props) => {
-    const { pic, name, email, website, salary, company_name, city } = props.developer;
+    const { pic, name, email, website, salary, company_name, city } =
+        props.developer;
+
+    // ===============================
+    // showing developers details on the ui;
+    // ===============================
+
     return (
         <div className="single-developers">
             <div className="pic">
@@ -28,16 +34,12 @@ const Developers = (props) => {
                     <span>He Lives In:</span> {city}
                 </p>
 
-
                 <button
                     onClick={() => props.handleAddToCart(props.developer)}
                     className="cart-btn"
                 >
-                   <i class="fas fa-cart-arrow-down"></i> Add To Cart
+                    <i class="fas fa-cart-arrow-down"></i> Add To Cart
                 </button>
-
-
-
             </div>
         </div>
     );
