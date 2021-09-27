@@ -28,7 +28,7 @@ const Body = () => {
                 {developers.map((developer) => (
                     <Developers
                         handleAddToCart={handleAddToCart}
-                        key={developers.id}
+                        key={developer.id}
                         developer={developer}
                     ></Developers>
                 ))}

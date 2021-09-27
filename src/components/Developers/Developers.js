@@ -2,7 +2,6 @@ import React from "react";
 import "./Developers.css";
 
 const Developers = (props) => {
-    console.log(props.developer);
     const { pic, name, email, website, salary, company_name, city } = props.developer;
     return (
         <div className="single-developers">
@@ -34,7 +33,7 @@ const Developers = (props) => {
                     onClick={() => props.handleAddToCart(props.developer)}
                     className="cart-btn"
                 >
-                    Add To Cart
+                   <i class="fas fa-cart-arrow-down"></i> Add To Cart
                 </button>
 
 
